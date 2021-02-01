@@ -1,0 +1,42 @@
+<html>
+<head>
+	<title>Pneumonia Detector</title>
+	<link href="https://fonts.googleapis.com/css?family=Nunito" rel="stylesheet">
+	<link rel="stylesheet" type="text/css" href="css/app.css">
+	<script src="https://cdn.jsdelivr.net/npm/@tensorflow/tfjs@latest"></script>
+	<script type="text/javascript" src="https://code.jquery.com/jquery-2.1.1.min.js"></script>  
+	<script type="text/javascript" src="js/layers.js"></script>
+</head>
+<body>
+	<div class="container">
+		<div class="mobilenet-demo-container">
+			<h3>Upload an image of a chest X-ray to find out whether you've got Pneumonia</h3>
+			<div class="demo-wrapper">
+				<div>
+					<label for="select-file-image" class="input-button">
+						Upload Image
+					</label>
+					<input id="select-file-image" type="file" onchange="loadFile(event)" style="display: none">
+				</div>
+				<div>
+					<button id="predict-button" class="input-button predict-button" onclick="predButton()">Predict</button>
+				</div>
+			</div>
+			<div class="demo-output">
+				<div class="out-box" id="select-file-box" style="display: none;">
+					<img id='test-image' />
+				</div>
+				<div class="out-box" id="predict-box" style="display: none;">
+					<p id="prediction"></p>
+					<br>
+					<ul id="predict-list">
+					</ul>
+				</div>
+			</div>
+		</div>
+	</div>
+	<script>
+		loadModel();
+	</script>
+</body>
+</html>

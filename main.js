@@ -73,12 +73,6 @@ async function predButton() {
 	document.getElementById("predict-box").style.display = "block";
 	document.getElementById("prediction").innerHTML = "The patient "+ tmp + className + "<br> with a <strong>" + probablity.toFixed(2) + "%</strong> chance";
 
-	// var ul = document.getElementById("predict-list");
-	// ul.innerHTML = "";
-	// var li = document.createElement("LI");
-	// li.innerHTML = className + " " + probablity.toFixed(6);
-	// ul.appendChild(li);
-
 }
 
 function preprocessImage(image) {

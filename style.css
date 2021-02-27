@@ -1,0 +1,65 @@
+/* font-family: 'Nunito', sans-serif; */
+html, body {
+    height: 100%;
+    font-family: Helvetica, Arial, sans-serif;
+}
+
+body{
+    margin: 0;
+    -webkit-box-align: center;
+    align-items: center;
+    -webkit-box-pack: center;
+    justify-content: center;
+    background-color: #957DAD;
+}
+.base-container{
+    border-radius: 15px;
+    background-color: #FFDFD3;
+    padding: 2%;
+}
+
+
+button {
+    border: 0;
+    border-radius: 0.25rem;
+    background: #A0D8E9;
+    color: brown; 
+    font-family: -system-ui, sans-serif;
+    font-size: 1rem;
+    line-height: 1.2;
+    white-space: nowrap;
+    text-decoration: none;
+    padding: 0.25rem 0.5rem;
+    margin: 0.25rem;
+    cursor: pointer;
+  }
+img{
+    border-radius: 0.25rem;
+}
+
+.demo-output {
+    display: none;
+    justify-content: space-between;
+    border-radius: 15px;
+    background-color: #E0BBE4;
+    padding: 2%;
+}
+#predict-box{
+    padding: 2%;
+}
+
+select{
+    background-color: #A7DB8C;
+    color: brown;
+    /* padding: 12px; */
+        /* width: 100%; */
+    margin: 0 auto;
+
+    border: none;
+    border-radius: 0.25rem;
+    /* font-size: 20px; */
+    /* box-shadow: 0 5px 25px rgba(0, 0, 0, 0.2); */
+    /* -webkit-appearance: button; */
+    /* appearance: button       ; */
+    outline: none;
+}

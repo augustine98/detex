@@ -1,22 +1,29 @@
-<html>
+<!DOCTYPE html>
+<html lang = "en">
 <head>
-	<title>Pneumonia Detector</title>
-	<link href="https://fonts.googleapis.com/css?family=Nunito" rel="stylesheet">
-	<link rel="stylesheet" type="text/css" href="css/app.css">
-	<script src="https://cdn.jsdelivr.net/npm/@tensorflow/tfjs@latest"></script>
-	<script type="text/javascript" src="https://code.jquery.com/jquery-2.1.1.min.js"></script>  
-	<script type="text/javascript" src="js/layers.js"></script>
+    <title>Pneumonia Detector</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+	<link rel="stylesheet" type="text/css" href="style.css">
+	
 </head>
-<body>
-	<div class="container">
-		<div class="mobilenet-demo-container">
-			<h3>Upload an image of a chest X-ray to find out whether you've got Pneumonia</h3>
-			<div class="demo-wrapper">
+<body style = "text-align: center !important; display: flex;">
+	<div class="base-container">
+		<div class="container">
+			<label for="model-selector">Choose the ailment</label>
+			<select name="disease" id = "model-selector" onchange="refresh()">
+				<option	value="pneumonia">Pneumonia</option>
+				<option value="brain-tumour">Brain Tumour</option>	
+			</select>
+			<div class="container">
 				<div>
+					<button>
 					<label for="select-file-image" class="input-button">
 						Upload Image
 					</label>
 					<input id="select-file-image" type="file" onchange="loadFile(event)" style="display: none">
+					</button>
+
 				</div>
 				<div>
 					<button id="predict-button" class="input-button predict-button" onclick="predButton()">Predict</button>
@@ -24,17 +31,18 @@
 			</div>
 			<div class="demo-output">
 				<div class="out-box" id="select-file-box" style="display: none;">
-					<img id='test-image' />
+					<img id='test-image' height="150" width="150"/>
 				</div>
 				<div class="out-box" id="predict-box" style="display: none;">
 					<p id="prediction"></p>
-					<br>
 					<ul id="predict-list">
 					</ul>
 				</div>
 			</div>
 		</div>
-	</div>
+    </div>
+    <script src="https://cdn.jsdelivr.net/npm/@tensorflow/tfjs@latest"></script> 
+	<script type="text/javascript" src="main.js"></script>
 	<script>
 		loadModel();
 	</script>

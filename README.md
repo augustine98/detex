@@ -1,13 +1,20 @@
 # Detex
 
-## Upload and classify images in browser using TensorFlow.js
+## Setup
 
+Clone this repository to your device
+```console
+git clone "https://github.com/augustine98/detex"
+```
 
-Steps to run : Open a new terminal, Go to the required directory and enter the following command <br />
+Navigate into the downloaded directory
+```console
+cd detex
+```
+
+Start a local HTTP server
 ```console 
 python3 -m http.server 8080
 ```
-Open your web browser and go to 
-```console
-http://localhost:8080/
-```
+
+Open your web browser and go to http://localhost:8080/
